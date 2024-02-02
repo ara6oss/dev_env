@@ -8,9 +8,10 @@ from goods.models import Categories, Products
 @admin.register(Categories)
 class CategoriesAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug' : ('name',)}
-    
+    readonly_fields = ('id',)
     
 @admin.register(Products)
 class ProductsAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug' : ('name',)}
+    readonly_fields = ('id',)
     
